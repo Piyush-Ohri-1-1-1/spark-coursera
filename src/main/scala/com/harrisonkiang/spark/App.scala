@@ -5,13 +5,9 @@ package com.harrisonkiang.spark
  *
  */
 
-import java.io.InputStream
 import java.net.URL
-
 import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
-
 
 object App {
   def main(args: Array[String]): Unit = {
