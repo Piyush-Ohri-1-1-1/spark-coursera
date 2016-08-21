@@ -1,23 +1,26 @@
 package com.harrisonkiang.spark
 
 /**
- * A self-contained Spark application
+ * A self-contained Spark application to estimate the value of pi
  *
  */
 
-import java.net.URL
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 
 object App {
+
   def main(args: Array[String]): Unit = {
-    val url: URL = getClass.getResource("/ap.txt")
+    val NUM_SAMPLES = 1000000000
     val conf = new SparkConf().setAppName("Simple Application")
-      .setMaster("local[4]")
+      .setMaster("local[4]") // adjust to number of cores
     val sc = new SparkContext(conf)
-    val logData = sc.textFile(url.toString)
-    val numAs = logData.filter(line => line.contains("a")).count()
-    val numBs = logData.filter(line => line.contains("b")).count()
-    println("Lines with a: %s, Lines with b: %s".format(numAs, numBs))
+    val count = sc.parallelize(1 to NUM_SAMPLES).map{i =>
+      val x = Math.random()
+      val y = Math.random()
+      if (x*x + y*y < 1) 1 else 0
+    }.reduce(_ + _)
+    println("Pi is roughly " + 4.0 * count / NUM_SAMPLES)
+
   }
 }
