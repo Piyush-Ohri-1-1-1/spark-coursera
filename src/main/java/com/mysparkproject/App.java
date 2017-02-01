@@ -1,4 +1,4 @@
-package com.cs410dso.postclassifier;
+package com.mysparkproject;
 
 /* SimpleApp.java */
 import org.apache.spark.SparkConf;
@@ -13,7 +13,7 @@ public class App {
         SparkConf conf = new SparkConf().setAppName("Simple Application").setMaster("local[*]");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
-        int NUM_SAMPLES = 100000000;
+        int NUM_SAMPLES = 1000000;
         List<Integer> l = new ArrayList<Integer>(NUM_SAMPLES);
         for (int i = 0; i < NUM_SAMPLES; i++) {
             l.add(i);
