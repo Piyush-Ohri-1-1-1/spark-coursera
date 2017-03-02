@@ -8,7 +8,7 @@ import org.apache.spark.api.java.function.Function;
 import java.util.ArrayList;
 import java.util.List;
 
-public class App {
+public class SparkJavaApp {
     public static void main(String[] args) {
         SparkConf conf = new SparkConf().setAppName("Simple Application").setMaster("local[*]");
         JavaSparkContext sc = new JavaSparkContext(conf);
