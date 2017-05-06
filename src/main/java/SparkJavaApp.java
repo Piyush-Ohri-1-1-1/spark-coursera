@@ -12,7 +12,7 @@ public class SparkJavaApp {
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         int NUM_SAMPLES = 1000000;
-        List<Integer> l = new ArrayList<Integer>(NUM_SAMPLES);
+        List<Integer> l = new ArrayList<>(NUM_SAMPLES);
         for (int i = 0; i < NUM_SAMPLES; i++) {
             l.add(i);
         }

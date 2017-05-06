@@ -7,6 +7,7 @@
 
   <properties>
     <maven_compiler_plugin.version>3.6.1</maven_compiler_plugin.version>
+    <java.version>1.8</java.version>
     <scala.version>2.11.11</scala.version>
     <spark.version>2.1.1</spark.version>
   </properties>
@@ -47,7 +48,6 @@
       <version>${maven_compiler_plugin.version}</version>
       <type>maven-plugin</type>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -59,8 +59,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven_compiler_plugin.version}</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
         </configuration>
       </plugin>
     </plugins>
