@@ -1,4 +1,4 @@
-package com.mysparkproject;
+package java;
 
 /* SimpleApp.java */
 import org.apache.spark.SparkConf;
@@ -27,6 +27,5 @@ public class SparkJavaApp {
             }
         }).count();
         System.out.println("Pi is roughly " + 4.0 * count / NUM_SAMPLES);
-
     }
 }
