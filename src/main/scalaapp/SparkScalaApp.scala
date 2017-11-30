@@ -1,3 +1,5 @@
+package scalaapp
+
 /* SparkScalaApp.java */
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf

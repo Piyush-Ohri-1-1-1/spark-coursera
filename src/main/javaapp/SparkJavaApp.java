@@ -1,4 +1,4 @@
-/* SparkJavaApp.java */
+package javaapp;/* SparkJavaApp.java */
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function;
