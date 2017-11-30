@@ -8,8 +8,8 @@
   <properties>
     <maven_compiler_plugin.version>3.6.1</maven_compiler_plugin.version>
     <java.version>1.8</java.version>
-    <scala.version>2.11.12</scala.version>
-    <spark.version>2.2.0</spark.version>
+    <scala.version>2.11.11</scala.version>
+    <spark.version>2.1.1</spark.version>
   </properties>
 
   <dependencies>
