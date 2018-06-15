@@ -9,7 +9,7 @@
     <maven_compiler_plugin.version>3.6.1</maven_compiler_plugin.version>
     <java.version>1.8</java.version>
     <scala.version>2.11.12</scala.version>
-    <spark.version>2.2.0</spark.version>
+    <spark.version>2.3.1</spark.version>
   </properties>
 
   <dependencies>
@@ -51,8 +51,8 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>src/main/</sourceDirectory>
-    <testSourceDirectory>src/test/</testSourceDirectory>
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
